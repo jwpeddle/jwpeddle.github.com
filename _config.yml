@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://jwpeddle.github.com
+url: http://typh.com
 title: typh.com
 subtitle: django and dumbells
 author: Jason Peddle
@@ -58,10 +58,10 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # ----------------------- #
 
 # Github repositories
-github_user: jwpeddle
-github_repo_count: 0
-github_show_profile_link: true
-github_skip_forks: true
+# github_user: jwpeddle
+# github_repo_count: 0
+# github_show_profile_link: true
+# github_skip_forks: true
 
 # Twitter
 twitter_user: jwpeddle
