@@ -60,19 +60,19 @@ process does in response to a signal is up to the process (usually).<br>
 Nginx uses the HUP signal too, for example, but it reacts more of like<br>
 apache does when it receives USR1 - it restarts <em>gracefully</em>.</p>
 
-<p>So what does this have to do with kill?\<br>
+<p>So what does this have to do with kill?<br>
 kill isn&#39;t just intended to violently end processes. It is used to send<br>
 <em>all</em> signals in a simple, direct, way. Calling <code>kill apache</code> sends the<br>
 TERM signal, just like <code>apache2ctl stop</code> does! And if is doesn&#39;t<br>
 shutdown after that: <code>kill -9</code> sends the <strong>KILL</strong> signal, which also<br>
-shuts down apache, but in a more aggressive way<del>- the apache process<br>
-gets no say. It just immediately dies, end of story. Why</del>9? 9 is just<br>
+shuts down apache, but in a more aggressive way- the apache process<br>
+gets no say. It just immediately dies, end of story. Why -9? 9 is just<br>
 an alias for KILL. Run <code>kill -l</code> and you&#39;ll see all the number aliases<br>
 and signals that can be sent. kill can also just use the signals name<br>
 directly. <code>kill</code> is the same as <code>kill -TERM</code>, which is the same as<br>
 <code>kill -15</code>.</p>
 
-<p>There are <a href="http://en.wikipedia.org/wiki/Signal_(computing">many signals</a>), most of which<br>
+<p>There are <a href="http://en.wikipedia.org/wiki/Signal_(computing">many signals</a>, most of which<br>
 are some variation of &quot;shut down&quot;. Some only apply to programs running<br>
 in a terminal: if you&#39;ve ever used <em>ctrl-c</em> to shutdown a process<br>
 running in the terminal, you&#39;ve sent <strong>INT</strong> (interrupt) signal! Kinda<br>
